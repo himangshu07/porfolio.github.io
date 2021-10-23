@@ -1,0 +1,550 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+html{
+    font-size: 62.5%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Acme', sans-serif;
+    background-color: rgb(11, 148, 167);
+}
+
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    
+    overflow: hidden;
+    
+}
+
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 4.8rem;
+   
+}
+.menu{
+    max-width: 115.2rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #eee
+}
+.logo{
+    font-size: 1.76rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    line-height: 6.4rem;
+}
+.logo span{
+    font-weight: 400;
+}
+.hamburger-menu{
+    height: 6.4rem;
+    width: 4.8rem;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    
+
+}
+.bar{
+    width: 3.04rem;
+    height: .15rem;
+    border-radius: .2rem;
+    background-color: #eee;
+    transition: 0.5s;
+    position: relative;
+}
+.bar::before, .bar::after{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color:#eee;
+    transition: 0.5s;
+}
+.bar::before{
+    transform: translateY(-.9rem);
+}
+.bar:after{
+    transform: translateY(.9rem);
+}
+.main{
+    position: relative;
+    width: 100%;
+    left: 0;
+    z-index: 5;
+    transform-origin: left;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+
+
+
+.hower{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(5, 83, 83);
+    position: relative;
+    transform-style: preserve-3d;
+    display: grid;
+}
+.pogram{
+    width: 100%;
+    height: 70rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+   
+
+}
+.proogress-bar{
+    padding-left: 2rem;
+    max-width: 65rem;
+    margin: left;
+    height: 65vh;
+    width: 100%;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.2);
+    
+}
+.proogress-bar h2{
+    font-size: 3rem;
+    line-height: 4rem;
+    text-align: center;
+    font-weight: 400;
+   
+
+}
+.proogress-bar .pogress{
+    margin: 2rem 0;
+}
+.proogress-bar .pogress:first-child{
+    margin-top: 0rem;
+}
+
+.proogress-bar .pogress .info{
+    margin-bottom: .5rem;
+}
+.proogress-bar .pogress .info span{
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity:0;
+    animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+.proogress-bar .pogress .progress-line{
+    position: relative;
+    height: 1rem;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 1rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0rem .1rem .1rem rgba(0,0,0,0.05),
+                      0rem .1rem  rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.pogress .progress-line span{
+    height: 100%;
+    width: 80%;
+    background:  rgb(5, 83, 83);
+    position: absolute;
+    border-radius: 1rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.progress-line.CC span{
+    width: 75%;
+}
+.progress-line.c span{
+    width: 70%;
+}
+.progress-line.web span{
+    width: 90%;
+}
+.progress-line.cloud span{
+    width:85%;
+}
+.progress-line.aws span{
+    width: 80%;
+}
+.progress-line.Python span{
+    width: 50%;
+}
+.progress-line.Linux span{
+    width: 65%;
+}
+
+.pogress .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -1rem;
+    height: 0;
+    width: 0;
+    border: .7rem solid transparent;
+    border-bottom-width: 0rem;
+    border-right-width: 0rem;
+    border-top-color: #000;
+    opacity:0;
+    animation: showText2 0.5s 1.5s linear forwards;
+
+}
+.pogress .progress-line span::after{
+    position: absolute;
+    
+    right: 0;
+    top: -2.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+   background: #000;
+   padding: .1rem .8rem;
+   border-radius: .3rem;
+   opacity:0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2{
+    100%{
+        opacity: 1;
+    }
+}
+.progress-line.CC span::after{
+    content: "75%";
+}
+.progress-line.c span::after{
+    content: "70%";
+}
+.progress-line.web span::after{
+    content: "90%";
+}
+.progress-line.cloud span::after{
+    content: "85%";
+}
+.progress-line.aws span::after{
+    content: "80%";
+}
+.progress-line.Python span::after{
+    content: "50%";
+}
+.progress-line.Linux span::after{
+    content: "65%";
+}
+
+
+
+
+
+
+
+.container.active .bar {
+    transform: rotate(360deg);
+    background-color: transparent;
+}
+.container.active .bar:before {
+    transform: translateY(0) rotate(45deg);
+}
+.container.active .bar:after {
+    transform: translateY(0) rotate(-45deg);
+}
+.container.active .main {
+    animation: main-animation 0.5s ease;
+    cursor:pointer;
+    transform:perspective(130rem) rotateY(20deg) translateZ(31rem) scale(0.5);
+}
+@keyframes main-animation {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform:perspective(130rem) rotateY(20deg) translateZ(31rem) scale(0.5);
+    }
+}
+.links {
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+.links a {
+    text-decoration: none;
+    color: #eee;
+    padding: 1.12rem 0;
+    display: inline-table;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(10rem);
+    animation: hide 0.5s forwards ease;
+}
+.links a:hover {
+    color: #fff;
+
+}
+.container.active .links a {
+    animation: appear 0.5s forwards ease var(--i);
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+    transform: translateY(0rem);
+    }
+}
+@keyframes hide {
+    from {
+        opacity: 0;
+    transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+    transform: translateY(0rem);
+    }
+}
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: 0.5s;
+    background-color:white;
+    
+}
+.shadow.one {
+    z-index: -1;
+   
+    opacity: 0.15;
+    
+
+}
+.shadow.two {
+    z-index: -2;
+    opacity: 0.1;
+}
+.container.active .shadow.one {
+    animation: shadow-one 0.6s ease-out;
+    transform:perspective(130rem) rotateY(20deg) translateZ(21.5rem) scale(0.5);
+
+}
+@keyframes shadow-one{
+    0%{
+        transform: translate(0);
+
+    }
+    5%{
+        transform:perspective(130rem) rotateY(20deg) translateZ(31rem) scale(0.5);
+    }
+    100%{
+        transform:perspective(130rem) rotateY(20deg) translateZ(31rem) scale(0.5);
+    }
+}
+.container.active .shadow.two {
+    animation: shadow-two 0.6s ease-out;
+    transform:perspective(130rem) rotateY(20deg) translateZ(12rem) scale(0.5);
+
+}
+@keyframes shadow-two{
+    0%{
+        transform: translate(0);
+
+    }
+    20%{
+        transform:perspective(130rem) rotateY(20deg) translateZ(31rem) scale(0.5);
+    }
+    100%{
+        transform:perspective(130rem) rotateY(20deg) translateZ(12rem) scale(0.5);
+    }
+}
+.container.active .main:hover + .shadow.one{
+transform:perspective(130rem) rotateY(20deg) translateZ(23rem) scale(0.5); ;
+}
+.container.active .main:hover{
+    transform:perspective(130rem) rotateY(20deg) translateZ(34rem) scale(0.5); ;
+    }
+    
+   .rightbar{
+    width: 100%;
+    height: 70vh;
+    padding: 5rem;
+    top: 0;
+    right: 0;
+  
+
+   }
+
+.wrapper{
+    width: 80rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.wrapper .card{
+    width: calc(33% - 2rem);
+    background: white;
+    height: 30rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.2);
+    
+}
+.wrapper .card .circle{
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    
+    border-radius: 50%;
+    cursor: default;
+}
+.card .circle .box,
+.card .circle .box span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+}
+.card .circle .box{
+    height: 100%;
+    width: 100%;
+    background:white;
+    transform: translate(-50%, -50%) scale(0.8);
+    border-radius: 50%;
+    transition: all 0.2s;
+
+}
+.card .circle:hover .box{
+    transform: translate(-50%, -50%) scale(0.91);
+}
+.card .circle .box span,
+.wrapper .card .text{
+ 
+    
+    background: -webkit-linear-gradient(left, #a445b2, 
+    -webkit-background-clip(text)
+    -webkit-text-fill-color(transparent))
+}
+.card .circle .box span{
+    font-size: 3rem;
+    font-weight: 600;
+    transform: translate(-45%, -50%);
+    transition: all 0.1s;
+}
+.card .circle:hover .box span{
+    transform: translate(-45%, -50%) scale(1.09);
+}
+
+.card .text{
+    font-size: 2rem;
+    font-weight: 500;
+}
+@media (max-width: 555px){
+    html{
+        font-size: 45%;
+    }
+    .rightbar{
+        width: 50%;
+    }
+    .wrapper{
+        width: 50rem;
+      display: none;
+    }
+    .proogress-bar{
+        height: 50vh;
+        width: 120%;
+    }
+    
+   
+}
+
+@media(max-width:396px){
+    html{
+        font-size: 32%;
+
+    }
+    .rightbar{
+        width: 35%;
+    }
+    .wrapper{
+        width: 50rem;
+      display: none;
+    }
+    .proogress-bar{
+        height: 33vh;
+        width: 120%;
+    }
+    
+
+}
+@media(max-width:335px){
+    html{
+        font-size: 30%;
+
+    }
+    .rightbar{
+        width: 35%;
+    }
+    .wrapper{
+        width: 50rem;
+      display: none;
+    }
+    .proogress-bar{
+        height: 33vh;
+        width: 120%;
+    }
+    
+
+}
+
+

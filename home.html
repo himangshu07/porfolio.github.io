@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./all.min.css">
+</head>
+<body>
+ 
+   <div class="container">
+       <div class="navbar">
+           <div class="menu">
+               <h3 class="logo">H <span>B</span></h3>
+               <div class="hamburger-menu">
+                   <div class="bar">
+
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="main-container">
+           <div class="main">
+               <header>
+                
+                <div id="section">
+                  <div id="left">
+                   <div id="smline" ></div>
+                     <h4 >Hey,I am</h4>
+                     <h3>Himangshu Boruah</h3>
+                         <h5>Computer Science <span id="lblue">Engineer</span> </h5>
+                         <button class="contact">Contact Me</button>
+                         <a href="./Resume format B.tech.pdf"><button class="cv">Download CV</button></a>
+                         <div class="popup">
+                            <div class="head">
+                                <span>Social Profile</span>
+                                <div class="close"><i class="uil uil-times"></i></div>
+                            </div>
+                            <div class="content">
+                                <ul class="icons">
+                                    <a href="https://github.com/himangshu07"><i class="fab fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/himangshu-boruah-ab566b15a/"><i class="fab fa-linkedin-in"></i></a>
+                                   <a href="https://wa.me/918404073290"><i class="fab fa-whatsapp"></i></a>
+                                   <a href="https://www.facebook.com/profile.php?id=100024613179689"><i class="fab fa-facebook-f"></i></a>
+                                   <a href="https://www.instagram.com/___mr.boruah__/?hl=en"><i class="fab fa-instagram"></i></a>
+                                   <a href="https://twitter.com/Himangxu1880"><i class="fab fa-twitter"></i></a>
+                                </ul>
+                            </div>
+                        </div>
+                        <script>
+                            const viewBtn = document.querySelector(".contact"),
+                             popup = document.querySelector(".popup"),
+                             close = popup.querySelector(".close");
+                             viewBtn.onclick = ()=>{
+                                 popup.classList.toggle("show");
+                             }
+                             close.onclick = ()=>{
+                                viewBtn.click();
+                             }
+                        </script>
+                     </div>
+                     <div id="right">
+                         <img src="./img/banner-image.png" class="img-fluid" alt="">
+                     </div>
+                     </div>
+            
+            </header>
+
+           </div>
+           <div class="shadow one"></div>
+           <div class="shadow two"></div>
+       </div>
+       <div class="links">
+           <ul>
+               <li>
+                  <a href="./index.html" style="--i: 0.5s">Home</a></li>
+                  <li>
+                       <a  href='./about.html' style="--i:0.1s">About Me</a></li>
+                    <li>
+                        <a href="./education.html" style="--i: 0.15s">Education</a></li>
+                  <li>
+                  <a href="./skill.html" style="--i: 0.1s">Skill</a></li>
+                  
+               
+                 
+
+               
+           </ul>
+       </div>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="app.js"></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./education.css">
+    <link rel="stylesheet" href="./all.min.css">
+    
+   
+   
+    <title>Education</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="menu">
+                <h3 class="logo">H <span>B</span></h3>
+                <div class="hamburger-menu">
+                    <div class="bar">
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="main">
+                <header>
+                 <div class="section">
+                     <div class="left">
+                         <h3>Educational qualification</h3>
+                         <div class="edu">
+                             <div id="slider">
+                                 <div class="edu-col">
+                                     <h1>HSLC</h1>
+                                     <p>2004-2016<br>
+                                         SEBA Board <br>
+                                        Balya Bhavan,Jorhat,Assam</p>
+                                 </div>
+                                 <div class="edu-col">
+                                    <h1>HS</h1>
+                                    <p>2016-2018<br>
+                                        AHSEC Board <br>
+                                       Bahona College,Jorhat,Assam</p>
+                                </div>
+                                <div class="edu-col">
+                                    <h1>BTech(cse)</h1>
+                                    <p>2018-2022<br>
+                                         SET<br>
+                                       Kaziranga University,Jorhat,Assam</p>
+                                </div>
+                             </div>
+                         </div>
+                      <div class="controller">
+                          <div id="line1"></div>
+                          <div id="line2"></div>
+                          <div id="line3"></div>
+                          <div id="active"></div>
+                      </div>
+
+                      
+                     </div>
+                     <div class="right">
+                      <div class="r">
+                         <h3>other qualification</h3>
+                         <div class="otr">
+                             <div id="sldr">
+                                <div class="otr-col">
+                                    <h1>Web developer </h1>
+                                    <p>Internship <br>
+                                    2month</p>
+                                    <a href="./course/learnovate.pdf"><button class="course">certificate</button></a>
+                                </div>
+                                 <div class="otr-col">
+                                     <h1> Python by google</h1>
+                                     <a href="./course/1.pdf"><button class="course">certificate</button></a>
+                                 </div>
+                                 <div class="otr-col">
+                                    <h1>Cybersecurity by IBM</h1>
+                                    <a href="./course/2.pdf"><button class="course">certificate</button></a>
+                                </div>
+                                <div class="otr-col">
+                                    <h1>Leadership development <br>Program</h1>
+                                    <a href="./course/3.pdf"><button class="course">certificate</button></a>
+                                </div>
+                                <div class="otr-col">
+                                    <h1>Fundamentals of Digital <br> Marketig </h1>
+                                    <a href="./course/4.pdf"><button class="course">certificate</button></a>
+                                </div>
+                             </div>
+                         </div>
+
+                         <div class="controller2">
+                            <div id="line4"></div>
+                            <div id="line5"></div>
+                            <div id="line6"></div>
+                            <div id="line7"></div>
+                            <div id="line8"></div>
+                            <div id="actve"></div>
+                        </div>
+                  
+
+
+
+
+
+                       </div>
+
+                      </div>
+             </header>
+ 
+            </div>
+            <div class="shadow one"></div>
+            <div class="shadow two"></div>
+       
+        <div class="links">
+            <ul>
+                <li>
+                   <a href="./home.html" style="--i: 0.5s">Home</a></li>
+                   <li>
+                    <a  href='./about.html' style="--i:0.1s">About Me</a></li>
+                    <li>
+                        <a href="./education.html" style="--i: 0.15s">Education</a></li>
+                   <li>
+                   <a href="./skill.html" style="--i: 0.1s">Skill</a></li>
+                
+                   
+                   
+ 
+                
+            </ul>
+      </div>
+      
+     </div>
+        
+        
+
+
+
+</div>
+<script>
+    var slider = document.getElementById('slider');
+    var active = document.getElementById('active');
+    var line1 = document.getElementById('line1');
+    var line2 = document.getElementById('line2');
+    var line3 = document.getElementById('line3');
+
+    line1.onclick = function(){
+        slider.style.transform = 'translateX(0)';
+        active.style.top = '0rem'
+    }
+    line2.onclick = function(){
+        slider.style.transform = 'translateX(-30%)';
+        active.style.top = '8rem'
+    }
+    line3.onclick = function(){
+        slider.style.transform = 'translateX(-66.7%)';
+        active.style.top = '20rem'
+    }
+</script>
+<script>
+    var sldr = document.getElementById('sldr');
+    var actve = document.getElementById('actve');
+    var line4 = document.getElementById('line4');
+    var line5 = document.getElementById('line5');
+    var line6 = document.getElementById('line6');
+    var line7 = document.getElementById('line7');
+    var line8 = document.getElementById('line8');
+
+    line4.onclick = function(){
+        sldr.style.transform = 'translateX(0)';
+        actve.style.top = '0rem'
+    }
+    line5.onclick = function(){
+        sldr.style.transform = 'translateX(-20%)';
+        actve.style.top = '4rem'
+    }
+    line6.onclick = function(){
+        sldr.style.transform = 'translateX(-40%)';
+        actve.style.top = '10rem'
+    }
+    line7.onclick = function(){
+        sldr.style.transform = 'translateX(-60%)';
+        actve.style.top = '15rem'
+    }
+    line8.onclick = function(){
+        sldr.style.transform = 'translateX(-80%)';
+        actve.style.top = '20rem'
+    }
+</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="app.js"></script>
+       
+</body>
+</html>

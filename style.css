@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+html{
+    font-size: 62.5%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Acme', sans-serif;
+    background-color: rgb(11, 148, 167);
+}
+#loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: anim2 1s cubic-bezier(0.19, 1, 0.22, 1) 7s both;
+    
+}
+#wrapperload{
+    width: 50rem;
+    height: 10rem;
+    
+    overflow: hidden;
+}
+#wrapperload .elem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+#wrapperload .elem img{
+    width: 40%;
+
+}
+#wrapperload .elem h3{
+    font-size: 5rem;
+}
+#wrapperload .elem:nth-child(1){
+    animation: anim 1s cubic-bezier(0.19, 1, 0.22, 1) 1.5s both;
+}
+#wrapperload .elem:nth-child(2){
+    animation: anim 1s cubic-bezier(0.19, 1, 0.22, 1) 2.7s both;
+}
+#wrapperload .elem:nth-child(3){
+    animation: anim 1s cubic-bezier(0.19, 1, 0.22, 1) 4s both;
+}
+@keyframes anim{
+    to{
+        margin-top: -10rem;
+    }
+}
+@keyframes anim2{
+    to{
+       transform: translateY(-100%);
+    }
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    
+    overflow: hidden;
+    
+}
+
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 4.8rem;
+   
+}
+.menu{
+    max-width: 115.2rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #eee
+}
+.logo{
+    font-size: 1.76rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    line-height: 6.4rem;
+}
+.logo span{
+    font-weight: 400;
+}
+.hamburger-menu{
+    height: 6.4rem;
+    width: 4.8rem;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    
+
+}
+.bar{
+    width: 3.04rem;
+    height: .15rem;
+    border-radius: .2rem;
+    background-color: #eee;
+    transition: 0.5s;
+    position: relative;
+}
+.bar::before, .bar::after{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color:#eee;
+    transition: 0.5s;
+}
+.bar::before{
+    transform: translateY(-.9rem);
+}
+.bar:after{
+    transform: translateY(.9rem);
+}
+.main{
+    position: relative;
+    width: 100%;
+    left: 0;
+    z-index: 5;
+    transform-origin: left;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+header{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(5, 83, 83);
+    position: relative;
+    transform-style: preserve-3d;
+    display: grid;
+  
+}
+
+#section{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    padding: 1rem;
+    
+   
+}
+
+#left{
+    width: 50%;
+    height: 100%;
+    padding: 11rem;   
+}
+
+
+#left #smline {
+    width: 9rem;
+    height: .3rem;
+    background-color: #eee
+}
+#left h4 {
+    font-size: 4rem;
+    margin-top: 1rem;
+    color: white;
+}
+#left img {
+    width: 50rem;
+    padding: 3rem;
+    
+}
+#left h3{
+    font-size: 7rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: #dadada;
+    
+    
+}
+#left h5 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: #dadada;
+    font-weight: 800;
+}
+#left h5 span{
+    color: rgb(128, 218, 248);
+}
+#right{
+    width: 100%;
+    height: 90vh;
+    padding: 5rem;
+    top: 0;
+    right: 0;
+
+}
+.container.active .bar {
+    transform: rotate(360deg);
+    background-color: transparent;
+}
+.container.active .bar:before {
+    transform: translateY(0) rotate(45deg);
+}
+.container.active .bar:after {
+    transform: translateY(0) rotate(-45deg);
+}
+.container.active .main {
+    animation: main-animation 0.5s ease;
+    cursor:pointer;
+    transform:perspective(130rem) rotateY(20deg) translateZ(31rem) scale(0.5);
+}
+@keyframes main-animation {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform:perspective(130rem) rotateY(20deg) translateZ(31rem) scale(0.5);
+    }
+}
+.links {
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+.links a {
+    text-decoration: none;
+    color: #eee;
+    padding: 1.12rem 0;
+    display: inline-table;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(10rem);
+    animation: hide 0.5s forwards ease;
+}
+.links a:hover {
+    color: #fff;
+
+}
+.container.active .links a {
+    animation: appear 0.5s forwards ease var(--i);
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+    transform: translateY(0rem);
+    }
+}
+@keyframes hide {
+    from {
+        opacity: 0;
+    transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+    transform: translateY(0rem);
+    }
+}
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: 0.5s;
+    background-color:white;
+    
+}
+.shadow.one {
+    z-index: -1;
+   
+    opacity: 0.15;
+    
+
+}
+.shadow.two {
+    z-index: -2;
+    opacity: 0.1;
+}
+.container.active .shadow.one {
+    animation: shadow-one 0.6s ease-out;
+    transform:perspective(130rem) rotateY(20deg) translateZ(21.5rem) scale(0.5);
+
+}
+@keyframes shadow-one{
+    0%{
+        transform: translate(0);
+
+    }
+    5%{
+        transform:perspective(130rem) rotateY(20deg) translateZ(31rem) scale(0.5);
+    }
+    100%{
+        transform:perspective(130rem) rotateY(20deg) translateZ(31rem) scale(0.5);
+    }
+}
+.container.active .shadow.two {
+    animation: shadow-two 0.6s ease-out;
+    transform:perspective(130rem) rotateY(20deg) translateZ(12rem) scale(0.5);
+
+}
+@keyframes shadow-two{
+    0%{
+        transform: translate(0);
+
+    }
+    20%{
+        transform:perspective(130rem) rotateY(20deg) translateZ(31rem) scale(0.5);
+    }
+    100%{
+        transform:perspective(130rem) rotateY(20deg) translateZ(12rem) scale(0.5);
+    }
+}
+.container.active .main:hover + .shadow.one{
+transform:perspective(130rem) rotateY(20deg) translateZ(23rem) scale(0.5); ;
+}
+.container.active .main:hover{
+    transform:perspective(130rem) rotateY(20deg) translateZ(34rem) scale(0.5); ;
+    }
+
+    @media(max-width:555px){
+        html{
+            font-size: 45%;
+         
+        }
+        
+        #section{
+            display: grid;
+            width: 100%;
+            height: 4rem;
+            padding: 3rem;
+        }
+        .img-fluid{
+                width: 45%;
+        }
+        .popup.show{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .contact{
+            margin-top: 30rem;
+        }
+    }
+    @media(max-width:396px){
+        html{
+            font-size: 32%;
+    
+        }
+        #section{
+            display: grid;
+            width: 100%;
+            height: 3rem;
+            padding: 1rem;
+        }
+        .img-fluid{
+                width: 45%;
+        }
+
+        .popup.show{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .contact{
+            margin-top: 15rem;
+        }   
+        
+         
+    }
+    @media(max-width:335px){
+        html{
+            font-size: 30%;
+    
+        }
+        #section{
+            display: grid;
+            width: 100%;
+            height: 3rem;
+            padding: 1rem;
+        }
+        .img-fluid{
+                width: 45%;
+        }
+
+        .popup.show{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .contact{
+            margin-top: 15rem;
+        }    
+    }
+    .contact, .popup{
+        position: absolute;
+        top:75%;
+        left: 20%;
+    }
+    button{
+        outline: none;
+        font-weight: 500;
+       
+        border-radius: .4rem;
+        cursor: pointer;
+        border: .2rem solid transparent;
+    }
+    .contact{
+        width: 10rem;
+        height: 5rem;
+        border: none;
+        color:black;
+        background-color:white;
+        border-radius: .4rem;
+        box-shadow: inset 0 0 0 0 rgb(5, 83, 83);
+        transition: ease-out 0.3s;
+        font-size: 1.5rem;
+        outline: none;
+    }
+  .contact:hover{
+      box-shadow:  inset 10rem 0 0 0 rgb(13, 219, 219);
+      cursor: pointer;
+      color:black;
+  }
+  .cv{
+    width: 10rem;
+    height: 5rem;
+    border: none;
+    color:black;
+    background-color:white;
+    border-radius: .4rem;
+    box-shadow: inset 0 0 0 0 rgb(5, 83, 83);
+    transition: ease-out 0.3s;
+    font-size: 1.5rem;
+    outline: none;
+}
+.cv:hover{
+    box-shadow:  inset 10rem 0 0 0 rgb(13, 219, 219);
+    cursor: pointer;
+    color:black;
+}
+    .popup{
+        
+        background: white;
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+        max-width: 38rem;
+        width: 100%;
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+        top: -150%;
+        pointer-events: none;
+        transition: top 0s 0.2s ease-in-out,
+                    opacity 0.2s 0s ease-in-out,
+                   transform 0.2s 0s ease-in-out;
+    }
+    .popup.show{
+        top: 50%;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1.4);
+        transition: top 0s 0.2s ease-in-out,
+                    opacity 0.2s 0s ease-in-out,
+                    transform 0.2s 0s ease-in-out;
+    
+    }
+    .popup :is(.head , .icons){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .popup .head{
+      
+        padding-bottom: 1.5rem;
+        border-bottom: .01rem solid #ebedf9;
+    }
+    .head span{
+        font-size: 2.1rem;
+        font-weight: 600;
+
+    }
+    .head, .close, .icons a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+     .close{
+        
+        height: 3.3rem;
+        width: 3.3rem;
+        background: #bdbec0;
+        cursor: pointer;
+
+    }
+    .popup .content{
+      margin: 2rem 0;
+
+    }
+    .content .icons{
+        margin: 1.5rem 0 2rem 0;
+        
+    }
+    .icons a{
+        height: 5rem;
+        width: 5rem;
+        font-size: 2rem;
+        border: .1rem solid transparent;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+    .icons a:nth-child(1){
+        color: #6e5494;
+        border-color: #6e5494;
+    }
+    .icons a:nth-child(1):hover{
+        background: #6e5494;
+    }
+    .icons a:nth-child(2){
+        color: #0e76a8;
+        border-color: #0e76a8;
+    }
+    .icons a:nth-child(2):hover{
+        background:#0e76a8;
+    }
+    .icons a:nth-child(3){
+        color: #25D366;
+        border-color:#25D366;
+    }
+    .icons a:nth-child(3):hover{
+        background: #25D366;
+    }
+    .icons a:nth-child(4){
+        color: #4267B2;
+        border-color:#4267B2;
+    }
+    .icons a:nth-child(4):hover{
+        background: #4267B2;
+    }
+    .icons a:nth-child(5){
+        color: #e1306c;
+        border-color: #f5bccf;
+    }
+    .icons a:nth-child(5):hover{
+        background:#e1306c;
+    }
+    .icons a:nth-child(6){
+        color: #0088cc;
+        border-color:#0088cc;
+    }
+    .icons a:nth-child(6):hover{
+        background: #0088cc;
+    }
+    .icons a:hover{
+        color: #fff;
+        border-color: transparent;
+    }
+    .icons a i{
+        transition: all 0.3s ease-in-out;
+    }
+    .icons a:hover i{
+        transform: scale(1.2);
+
+    }
